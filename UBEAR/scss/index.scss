@@ -1,0 +1,616 @@
+* {
+    font-family: Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+    line-height: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+h2 {
+    color: #1C1C1C;
+    font-size: 32px;
+    text-align: center;
+    font-weight: normal;
+
+    @include pad {
+
+        padding: 0 20px;
+
+    }
+}
+
+p {
+    font-size: 20px;
+    color: #595959;
+
+    line-height: 1.5;
+    text-align: center;
+
+}
+
+section {
+    padding: 60px 0;
+
+    @include pad {
+
+        padding: 20px 0;
+
+    }
+}
+
+.kv {
+    margin-top: 60px;
+    background-color: #DAF2F1;
+    overflow: hidden;
+
+    .container {
+        text-align: center;
+        position: relative;
+
+        .kv_tt {
+            max-width: 300px;
+        }
+
+        .kv_cashnumber {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .kv_floor {
+
+            width: 100%;
+
+
+            position: relative;
+            bottom: -60px;
+            z-index: 10;
+
+            @include pad {
+
+                bottom: -20px;
+
+            }
+
+        }
+
+        .kv_limg {
+            position: absolute;
+            max-width: 250px;
+
+            left: 0;
+            bottom: 0px;
+
+            @include pad {
+
+                display: none;
+
+            }
+        }
+        #svgContainer{
+            max-width: 650px;
+            margin: auto;
+        }
+        .kv_rimg {
+            position: absolute;
+            max-width: 250px;
+
+            right: 0;
+            bottom: 0px;
+
+            @include pad {
+
+                display: none;
+
+            }
+
+        }
+    }
+}
+
+.notice_box {
+    display: none;
+    position: relative;
+
+    .fancybox-close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 18px;
+        height:18px;
+        cursor: pointer;
+        z-index: 8040;
+        background-image: url(../images/close_btn.svg);
+        
+    }
+
+    ul {
+
+        padding: 16px;
+
+        li {
+
+            line-height: 1.5;
+            font-size: 16px;
+            text-indent: -10px;
+            color: #595959;
+            span{
+                color: #F15A24;
+            }
+            a{
+                color: #0000FF;
+            }
+        }
+
+        li:before {
+            width: 3px;
+            height: 3px;
+            background-color: #595959;
+            content: "";
+            display: inline-block;
+            margin-right: 5px;
+            border-radius: 100px;
+            position: relative;
+            top: -3px;
+        }
+    }
+
+}
+
+
+.card {
+    .container {
+        margin: auto;
+        width: 90%;
+        max-width: 1000px;
+
+        li {
+            display: inline-block;
+            text-align: center;
+            width: 32%;
+            animation: shake 1s alternate  infinite ease-in;
+            @include iphone {
+
+                display: block;
+                margin: 20px auto;
+                width: 100%;
+
+
+            }
+
+            img {
+                max-width: 200px;
+            }
+        }
+    }
+
+    .btn {
+        text-align: center;
+        margin: 60px auto 0 auto;
+        background-color: #00a19b;
+        color: #fff;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+}
+
+.normal_beear_TwoCol {
+    // margin-top: 500px;
+
+    .container {
+        max-width: 800px;
+        margin: auto;
+
+        li {
+            display: inline-block;
+            text-align: left;
+            vertical-align: middle;
+            width: 48%;
+
+            @include pad {
+
+                display: block;
+                margin: auto;
+                text-align: center;
+            }
+
+            img {
+                width: 100%;
+
+
+            }
+
+            .normal_txt {
+                max-width: 120px;
+
+            }
+
+            h2 {
+                font-size: 32px;
+                text-align: left;
+                margin: 30px 0;
+
+                color: #1C1C1C;
+
+                @include pad {
+
+                    text-align: center;
+
+                }
+
+                @include iphone {
+
+                    font-size: 22px;
+
+
+                }
+
+                span {
+                    font-size: 56px;
+                    color: #EF4343;
+
+                    @include iphone {
+
+                        font-size: 42px;
+
+
+                    }
+                }
+
+                .fz_small {
+                    font-size: 22px;
+                    color: #1C1C1C;
+
+                }
+
+            }
+
+            p {
+                font-size: 16px;
+                text-align: left;
+
+                @include pad {
+
+                    text-align: center;
+
+                }
+            }
+
+
+        }
+
+        li:nth-child(1) {
+            width: 40%;
+            margin-right: 60px;
+
+            @include pad {
+
+
+                margin: 60px auto;
+            }
+
+            @include iphone {
+
+
+                width: 80%;
+            }
+        }
+
+
+
+    }
+}
+
+.no {
+    max-width: 900px;
+    margin: 30px auto;
+
+    @include pad {
+
+
+        width: 70%;
+    }
+
+    p {
+        font-size: 16px;
+        text-align: left;
+
+        a {
+            color: #0000FF;
+        }
+    }
+}
+
+.btn {
+    font-size: 16px;
+    border: 1px solid #00A19B;
+    width: 140px;
+    display: block;
+    color: #00A19B;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 20px;
+
+    @include pad {
+
+
+        margin: 30px auto;
+    }
+}
+
+.cash,
+.video {
+    .normal_txt {
+        max-width: 180px !important;
+
+    }
+}
+
+.beanfun {
+
+    .container {
+        position: relative;
+        max-width: 800px;
+
+        margin: auto;
+
+        img {
+            max-width: 150px;
+            position: absolute;
+        }
+
+        .beanfun_l,
+        .beanfun_r {
+            @include iphone {
+
+
+                display: none;
+            }
+        }
+
+        .beanfun_l {
+            left: 0%;
+        }
+
+        .beanfun_r {
+            right: 0%;
+        }
+
+        h2 {
+            font-size: 28px;
+
+
+            .c_orange {
+                color: #F15A24;
+                font-weight: 400;
+            }
+
+            .fz_big {
+                font-size: 56px;
+                color: #F15A24;
+
+
+            }
+
+
+        }
+
+        .no {
+            max-width: 800px;
+
+        }
+
+        .btn {
+            margin: auto;
+        }
+
+    }
+}
+
+.pink {
+    .container {
+        text-align: center;
+        max-width: 800px;
+        margin: auto;
+
+        h2 {
+            position: relative;
+            z-index: 10;
+
+            span {
+                font-size: 18px;
+            }
+        }
+
+        img {
+            max-width: 400px;
+        }
+
+        .pink_card {
+            position: relative;
+            top: -30px;
+            animation: shake 1s alternate  infinite ease-in;
+          
+        }
+
+        ul {
+            li {
+                display: inline-block;
+                width: 48%;
+                vertical-align: top;
+
+                @include iphone {
+
+
+                    display: block;
+                    margin: 30px auto;
+
+                }
+
+                img {
+                    max-width: 200px;
+                }
+
+                h3 {
+                    font-size: 22px;
+                    margin: 10px 0;
+
+                    @include iphone {
+
+
+                        font-size: 20px;
+
+
+                    }
+
+                    span {
+                        font-size: 36px;
+                        color: #EF4343;
+
+                    }
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        a {}
+
+        .btn {
+            margin: 30px auto;
+        }
+    }
+
+
+
+}
+
+.step {
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        text-align: center;
+        .wallet{
+            animation: shake 1s alternate  infinite ease-in;
+
+        }
+        img {
+            max-width: 80px;
+        }
+
+        h2 {
+            color: #1CADA4;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 20px 0;
+
+            @include pad {
+
+
+                padding: 0 10px;
+            }
+        }
+
+        ul {
+            text-align: center;
+            width: 100%;
+
+            @include pad {
+
+                width: 80%;
+                margin: 30px auto;
+
+            }
+
+            li {
+                display: inline-block;
+                width: 22%;
+                margin: 0 10px;
+                vertical-align: top;
+
+                @include pad {
+
+                    width: 40%;
+                    margin: 30px auto;
+                }
+
+                @include iphone {
+
+                    width: 100%;
+
+                }
+
+                h3 {
+                    font-size: 18px;
+                    font-weight: 400;
+                    height: 100px;
+
+                    span {
+                        font-size: 32px;
+                        font-style: italic;
+                        color: #EF4343;
+                    }
+                }
+
+                img {
+                    max-width: 200px;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(180deg);
+    }
+
+    90% {
+        transform: rotate(180deg);
+    }
+
+  
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1, 0);
+    }
+
+    10% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(5deg);
+    }
+
+  
+     100% {
+        transform: rotate(-5deg);
+    }
+}
